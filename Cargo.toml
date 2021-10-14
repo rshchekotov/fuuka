@@ -1,0 +1,24 @@
+[package]
+name = "fuuka"
+version = "0.1.0"
+authors = ["Roman Shchekotov <rom.shchekotov@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+dotenv = "~0.15.0"
+
+[dependencies.serenity]
+git = "https://github.com/serenity-rs/serenity"
+branch = "current"
+default-features = false
+features = [
+  "client",
+	"gateway",
+	"rustls_backend",
+	"model",
+	"unstable_discord_api"
+]
+
+[dependencies.tokio]
+version = "1.0"
+features = ["macros", "rt-multi-thread"]
